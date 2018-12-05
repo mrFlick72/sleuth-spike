@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: sleuth-spike
+
+logging.folder: sleuth-spike
