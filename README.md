@@ -112,7 +112,7 @@ Reading the official [Spring documentation](https://cloud.spring.io/spring-cloud
  
  the Logstash pipeline can be something like below
 
- ```yml
+ ```yaml
  input {
  	tcp {
  		port => 5000
