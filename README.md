@@ -114,22 +114,22 @@ Reading the official [Spring documentation](https://cloud.spring.io/spring-cloud
 
  ```yaml
  input {
- 	tcp {
- 		port => 5000
- 	}
+  tcp {
+    port => 5000
+    }
  }
  
  ## Add your filters / logstash plugins configuration here
  filter {
- 	# pattern matching logback pattern
- 	grok {
- 		match => { "message" => "%{TIMESTAMP_ISO8601:timestamp}\s+%{LOGLEVEL:severity}\s+\[%{DATA:service},%{DATA:trace},%{DATA:span},%{DATA:exportable}\]\s+%{DATA:pid}\s+---\s+\[%{DATA:thread}\]\s+%{DATA:class}\s+:\s+%{GREEDYDATA:rest}" }
- 	}
+    # pattern matching logback pattern
+    grok {
+      match => { "message" => "%{TIMESTAMP_ISO8601:timestamp}\s+%{LOGLEVEL:severity}\s+\[%{DATA:service},%{DATA:trace},%{DATA:span},%{DATA:exportable}\]\s+%{DATA:pid}\s+---\s+\[%{DATA:thread}\]\s+%{DATA:class}\s+:\s+%{GREEDYDATA:rest}" }
+      }
  }
  
  output {
- 	elasticsearch {
- 		hosts => "elasticsearch:9200"
- 	}
+    elasticsearch {
+    hosts => "elasticsearch:9200"
+  }
  }
  ```
