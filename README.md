@@ -133,3 +133,6 @@ Reading the official [Spring documentation](https://cloud.spring.io/spring-cloud
   }
  }
  ```
+ 
+The result on Kibana is like below:
+![](https://github.com/mrFlick72/sleuth-spike/blob/master/kibana.jpeg)
