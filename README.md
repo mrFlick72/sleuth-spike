@@ -94,7 +94,7 @@ Reading the official [Spring documentation](https://cloud.spring.io/spring-cloud
          </encoder>
      </appender>
      
-     
+     <!--PAY ATTENTION!!!! this is the appender that is not documented in the official Spring documentation that will send your logs to logstash-->
      <appender name="stash" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
          <destination>localhost:5000</destination>
          <encoder class="net.logstash.logback.encoder.LogstashEncoder" />
