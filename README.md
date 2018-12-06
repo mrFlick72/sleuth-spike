@@ -133,4 +133,9 @@ Reading the official [Spring documentation](https://cloud.spring.io/spring-cloud
  ```
  
 The result on Kibana is like below:
-![](https://github.com/mrFlick72/sleuth-spike/blob/master/kibana.jpeg)
+![](https://github.com/mrFlick72/sleuth-spike/blob/master/img/kibana.jpeg)
+
+in order to configure the dashboard shown above it is possible follow the sequence steps
+![](https://github.com/mrFlick72/sleuth-spike/blob/master/img/kibana1.jpeg)
+![](https://github.com/mrFlick72/sleuth-spike/blob/master/img/kibana2.jpeg)
+![](https://github.com/mrFlick72/sleuth-spike/blob/master/img/kibana3.jpeg)
