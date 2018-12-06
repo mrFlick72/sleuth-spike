@@ -1,9 +1,7 @@
 # sleuth-spike
 Spike on Spring Cloud Sleuth
 
-In this repo I explore the Spring Cloud Sleuth capabilities. The first feature explored is about log aggregation/correlation.
-First of all may be useful understand what problem Spring Cloud Sleuth solve. Spring Cloud Sleuth solve the problem of **distributed tracing** in a Spring Cloud application.
-
+In this repo I give an example of how use the Spring Cloud Sleuth capabilities for log aggregation and how visualize those data on kibana.
 In a monolithic application the log and service call tracing is a relative simple problem to solve, all service flow is implemented 
 on the same system. However in a distributed system we may need, during trouble shutting, follow log of different application 
 that cooperate in the system. A typical pattern involve a correlation id in the log messages and use this correlation id in order to 
@@ -15,7 +13,7 @@ access to the server in order to read logs. A popular solution involve the ELK (
 Reading the official [Spring documentation](https://cloud.spring.io/spring-cloud-static/Finchley.SR2/single/spring-cloud.html#_spring_cloud_sleuth)
  configure ELK is very simple we only need configure a logback-spring.xml and spring.application.name property 
  in the bootstrap.yml/properties and the game is done!. However It is so simple like no so simple. This configuration is enough for formatting the log 
- but is necessary then send those logs to Logstash. In this step there is the pitfall, the official spring documentation do not show how configure Logstash. 
+ but is necessary then send these logs to Logstash. In this step there is the pitfall, the official spring documentation do not show how configure Logstash. 
  Typically we can configure in two way the log crawling the first more simple is configure Logstash input pipeline to watch the path in which the your application will write logs. 
  This solution is simple but not so good, Logstash is a very powerful product but having it configured in any application server do not scale well in this case we use it as a sort of agent in the application server, if we want send log, Filebeat 
  probably is a better solution. The primary problem of install Logstash in any server is that we should configure the Logstash pipeline and maintain it in any application server. 
