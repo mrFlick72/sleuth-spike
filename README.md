@@ -1,7 +1,7 @@
 # sleuth-spike
 Spike on Spring Cloud Sleuth
 
-In this repo I give an example of how use the Spring Cloud Sleuth capabilities for log aggregation and how visualize those data on kibana.
+In this repo I give an example of how use the Spring Cloud Sleuth capabilities for log aggregation and how visualize these data on Kibana.
 In a monolithic application the log and service call tracing is a relative simple problem to solve, all service flow is implemented 
 on the same system. However in a distributed system we may need, during trouble shutting, follow log of different application 
 that cooperate in the system. A typical pattern involve a correlation id in the log messages and use this correlation id in order to 
@@ -18,7 +18,7 @@ Reading the official [Spring documentation](https://cloud.spring.io/spring-cloud
  This solution is simple but not so good, Logstash is a very powerful product but having it configured in any application server do not scale well in this case we use it as a sort of agent in the application server, if we want send log, Filebeat 
  probably is a better solution. The primary problem of install Logstash in any server is that we should configure the Logstash pipeline and maintain it in any application server. 
  For sending log Filebeat is enough and more suitable, it belongs to a specific product family called Beats that is designed just for these use cases. 
- If we do not want install Filebeat in our application server we can congure the Logstash pipeline with an input channel in tcp on the port 5000 and then configure a custom appender in our application that send log events via TCP on Logstash.
+ If we do not want install Filebeat in our application server we can configure the Logstash pipeline with an input channel in tcp on the port 5000 and then configure a custom appender in our application that send log events via TCP on Logstash.
  
  For the logback-spring.xml we can configure it like below:
  
